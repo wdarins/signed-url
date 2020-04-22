@@ -1,5 +1,5 @@
 {
-    "name": "linkeys/signed-url",
+    "name": "wdarins/signed-url",
     "description": "Enhanced signed URLs for Laravel, including attaching data, click limits and expiry.",
     "keywords": [
 	"signed",
