@@ -1,57 +1,55 @@
 {
-    "name": "wdarins/signed-url",
-    "description": "Enhanced signed URLs for Laravel, including attaching data, click limits and expiry.",
-    "keywords": [
-	"signed",
-	"url",
-	"laravel",
-	"expire",
-	"single use",
-	"link",
-	"linkeys"
+  "name": "wdarins/signed-url",
+  "description": "Enhanced signed URLs for Laravel, including attaching data, click limits and expiry.",
+  "keywords": [
+    "signed",
+    "url",
+    "laravel",
+    "expire",
+    "single use",
+    "link",
+    "linkeys"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [{
+    "name": "Toby Twigger",
+    "email": "tobytwigger@hotmail.co.uk"
+  }],
+  "require": {
+    "php": "^7.2",
+    "ramsey/uuid": "^3.8",
+    "illuminate/support": "^5.7.0|^6.0|^7.0",
+    "illuminate/database": "^5.7.0|^6.0|^7.0",
+    "illuminate/config": "^5.7.0|^6.0|^7.0",
+    "nesbot/carbon": "^2.17",
+    "spatie/url": "^1.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.5",
+    "orchestra/testbench": "^3.7"
+  },
+  "autoload": {
+    "classmap": [
+      "database/factories"
     ],
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Toby Twigger",
-            "email": "tobytwigger@hotmail.co.uk"
-        }
-    ],
-    "require": {
-        "php": "^7.2",
-        "ramsey/uuid": "^3.8",
-        "illuminate/support": "^5.7.0|^6.0|^7.0",
-        "illuminate/database": "^5.7.0|^6.0|^7.0",
-        "illuminate/config": "^5.7.0|^6.0|^7.0",
-        "nesbot/carbon": "^2.17",
-        "spatie/url": "^1.3"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.0",
-        "orchestra/testbench": "^3.7"
-    },
-    "autoload": {
-        "classmap": [
-            "database/factories"
-        ],
-        "psr-4": {
-            "Linkeys\\UrlSigner\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Linkeys\\UrlSigner\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Linkeys\\UrlSigner\\Providers\\UrlSignerServiceProvider"
-            ],
-            "aliases": {
-                "UrlSigner": "Linkeys\\UrlSigner\\Link"
-            }
-        }
+    "psr-4": {
+      "Linkeys\\UrlSigner\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Linkeys\\UrlSigner\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Linkeys\\UrlSigner\\Providers\\UrlSignerServiceProvider"
+      ],
+      "aliases": {
+        "UrlSigner": "Linkeys\\UrlSigner\\Link"
+      }
+    }
+  }
 }
